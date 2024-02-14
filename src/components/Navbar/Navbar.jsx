@@ -3,6 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 import styled, { useTheme } from "styled-components";
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
+import { Bio } from "../../data/Constants";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -92,25 +93,26 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const GitHubButton = styled.div`
-  background-color: transparent;
-  color: ${({ theme }) => theme.primary};
+const GitHubButton = styled.a`
   border: 1.8px solid ${({ theme }) => theme.primary};
-  border-radius: 20px;
-  display: flex;
   justify-content: center;
+  display: flex;
   align-items: center;
-  padding: 0px 20px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
   height: 70%;
+  border-radius: 20px;
+  color: ${({ theme }) => theme.primary};
+  cursor: pointer;
+  padding: 0 20px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.6s ease-in-out;
   :hover {
-    background-color: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.white};
   }
-  @media screen and (max-width: 640px) {
-    font-size: 0.8rem;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
   }
 `;
 
@@ -179,7 +181,9 @@ const Navbar = () => {
           <NavLink href="#education">Education</NavLink>
         </Navitems>
         <ButtonContainer>
-          <GitHubButton>Github Profile</GitHubButton>
+          <GitHubButton href={Bio.github} target="_blank">
+            Github Profile
+          </GitHubButton>
         </ButtonContainer>
       </NavContainer>
       {open && (
@@ -224,9 +228,9 @@ const Navbar = () => {
               padding: "10px 16px",
               background: `${theme.primary}`,
               color: "white",
-              width: `max-content`,
+              width: "max-content",
             }}
-            href="/"
+            href={Bio.github}
             target="_blank">
             Github Profile
           </GitHubButton>

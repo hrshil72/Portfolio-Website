@@ -43,13 +43,14 @@ const HeroBg = styled.div`
   }
 `;
 const HeroInnerContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1100px;
 
-  @media screen and (max-width: 960px) {
+  @media (max-width: 960px) {
     flex-direction: column;
   }
 `;
@@ -73,7 +74,7 @@ const HeroLeftContainer = styled.div`
     flex-direction: column;
   }
 `;
-const HerorightContainer = styled.div`
+const HeroRightContainer = styled.div`
   width: 100%;
   order: 2;
   display: flex;
@@ -188,7 +189,7 @@ const ResumeButton = styled.a`
   }
 `;
 
-const Image = styled.img`
+const Img = styled.img`
   width: 100%;
   height: 100%;
   position: relative;
@@ -217,10 +218,9 @@ const Hero = () => {
           <HeroBgAnimation />
         </HeroBg>
         <HeroInnerContainer>
-          <HeroLeftContainer>
+          <HeroLeftContainer id="Left">
             <Title>
-              Hi, I am <br />
-              {Bio.name}
+              Hi, I am <br /> {Bio.name}
             </Title>
             <TextLoop>
               I am a
@@ -235,16 +235,17 @@ const Hero = () => {
               </Span>
             </TextLoop>
             <SubTitle>{Bio.description}</SubTitle>
-            <ResumeButton href={Bio.resume} target="_blank">
+            <ResumeButton href={Bio.resume} target="display">
               Check Resume
             </ResumeButton>
           </HeroLeftContainer>
-          <HerorightContainer>
-            <Image
+
+          <HeroRightContainer id="Right">
+            <Img
               src="https://static.vecteezy.com/system/resources/previews/024/766/962/original/silver-gradient-social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-free-vector.jpg"
-              alt="Hero"
+              alt="hero-image"
             />
-          </HerorightContainer>
+          </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>
     </div>

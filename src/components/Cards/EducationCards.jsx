@@ -1,5 +1,4 @@
 import React from "react";
-import { experiences } from "../../data/Constants";
 import styled from "styled-components";
 
 const Card = styled.div`
@@ -34,7 +33,6 @@ const Top = styled.div`
 `;
 const Logo = styled.img`
   height: 50px;
-  background-color: #000;
   border-radius: 10px;
   margin-top: 4px;
 
@@ -47,7 +45,7 @@ const Body = styled.div`
   flex-direction: column;
   width: 100%;
 `;
-const Role = styled.div`
+const Name = styled.div`
   font-size: 18px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary + 99};
@@ -56,7 +54,7 @@ const Role = styled.div`
     font-size: 14px;
   }
 `;
-const Company = styled.div`
+const Degree = styled.div`
   font-size: 14px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_secondary + 99};
@@ -86,56 +84,31 @@ const Description = styled.div`
   }
 `;
 
-const Skills = styled.div`
-  width: 100%;
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-`;
-const ItemWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-`;
-const Skill = styled.div`
-  font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
-
-  @media screen and (max-width: 768px) {
-    font-size: 12px;
-  }
+const Span = styled.div`
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-width: 100%;
+  text-overflow: ellipsis;
 `;
 
-const Cards = ({ experience }) => {
+const EducationCards = ({ education }) => {
   return (
     <Card>
       <Top>
-        <Logo src={experience.img}></Logo>
+        <Logo src={education.img}></Logo>
         <Body>
-          <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
+          <Name>{education.school}</Name>
+          <Degree>{education.degree}</Degree>
+          <Date>{education.date}</Date>
         </Body>
       </Top>
       <Description>
-        {experience.desc}
-        {experience?.skills && (
-          <>
-            <br />
-            <Skills>
-              <b>Skills:</b>
-              <ItemWrapper>
-                {experience.skills.map((skill) => {
-                  return <Skill>{skill} </Skill>;
-                })}
-              </ItemWrapper>
-            </Skills>
-          </>
-        )}
+        <Span>{education.desc}</Span>
       </Description>
     </Card>
   );
 };
 
-export default Cards;
+export default EducationCards;
