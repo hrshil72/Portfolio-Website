@@ -16,7 +16,7 @@ const Card = styled.div`
   gap: 12px;
   transition: all 0.3s ease-in-out;
 
-  &hover {
+  &:hover {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
   }
@@ -32,7 +32,7 @@ const Top = styled.div`
   gap: 12px;
   width: 100%;
 `;
-const Logo = styled.div`
+const Logo = styled.img`
   height: 50px;
   background-color: #000;
   border-radius: 10px;
@@ -56,8 +56,56 @@ const Role = styled.div`
     font-size: 14px;
   }
 `;
-const Company = styled.div``;
-const Date = styled.div``;
+const Company = styled.div`
+  font-size: 14px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary + 99};
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+const Date = styled.div`
+  font-size: 12px;
+  font-weight: 400px;
+  color: ${({ theme }) => theme.text_secondary + 80};
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
+`;
+
+const Description = styled.div`
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary + 99};
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
+const Skills = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+`;
+const ItemWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+`;
+const Skill = styled.div`
+  font-size: 15px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary + 99};
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
 
 const Cards = ({ experience }) => {
   return (
@@ -70,12 +118,22 @@ const Cards = ({ experience }) => {
           <Date>{experience.date}</Date>
         </Body>
       </Top>
-      {/* <Description></Description>
-      {experiences.doc && (
-        <a href={experience.doc} target="new">
-          <Document />
-        </a>
-      )} */}
+      <Description>
+        {experience.desc}
+        {experience?.skills && (
+          <>
+            <br />
+            <Skills>
+              <b>Skills:</b>
+              <ItemWrapper>
+                {experience.skills.map((skill) => {
+                  return <Skill>{skill} </Skill>;
+                })}
+              </ItemWrapper>
+            </Skills>
+          </>
+        )}
+      </Description>
     </Card>
   );
 };
