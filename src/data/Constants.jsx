@@ -83,6 +83,21 @@ export const skills = [
         image:
           "https://seeklogo.com/images/J/jquery-logo-CFE6ECE363-seeklogo.com.png",
       },
+      {
+        name: "Websockets",
+        image:
+          "https://www.outsystems.com/Forge_BL/rest/ComponentThumbnail/GetURL_ComponentThumbnail?ProjectImageId=17523",
+      },
+      {
+        name: "WebRTC",
+        image:
+          "https://webrtc.github.io/webrtc-org/assets/images/webrtc-logo-vert-retro-255x305.png",
+      },
+      {
+        name: "MaterialUI",
+        image:
+          "https://static-00.iconduck.com/assets.00/material-ui-icon-2048x1626-on580ia9.png",
+      },
     ],
   },
   {
@@ -108,6 +123,11 @@ export const skills = [
     title: "Developer Tools",
     skills: [
       {
+        name: "Vscode",
+        image:
+          "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.png",
+      },
+      {
         name: "Git",
         image: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
       },
@@ -120,6 +140,11 @@ export const skills = [
         name: "GitLab",
         image:
           "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/144_Gitlab_logo_logos-512.png",
+      },
+      {
+        name: "Firebase",
+        image:
+          "https://static-00.iconduck.com/assets.00/firebase-icon-373x512-4oe8cs0m.png",
       },
     ],
   },
@@ -178,47 +203,47 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "title",
-    date: "Jun 2023 - Jul 2023",
-    description: "description",
-    image: "image",
-    tags: ["tags"],
+    title: "Google Search Engine Clone",
+    description:
+      "Google Search Engine Clone: Immerse yourself in the world of web search with this project, a meticulously crafted replica of the Google search engine. Developed using ReactJS and styled with Material-UI, the application taps into Google's Custom Search API to deliver real-time search results. Dive into a user-friendly interface that mirrors the Google experience, offering a seamless exploration of the vast web landscape.",
+    image: "https://i.ibb.co/Gt25bC5/Screenshot-2024-02-29-234230.png",
+    tags: ["ReactJS", "Material UI", "Firebase"],
     category: "frontend",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify.duckdns.org",
+    github: "https://github.com/hrshil72/Google-Clone",
+    webapp: "https://google-engine-clone.vercel.app/",
   },
   {
     id: 1,
-    title: "title",
-    date: "Jun 2023 - Jul 2023",
-    description: "description",
-    image: "image",
-    tags: ["tags"],
+    title: "Let's Hinge - Video Chatting App",
+    description:
+      "Let's Hinge - Video Chatting App: Elevate your communication with this innovative video chatting app. Built with React, Socket.IO, and WebRTC, Let's Hinge enables real-time video conversations. Seamlessly connect with friends, colleagues, or loved ones through secure peer-to-peer connections. Experience high-quality video calls in a user-friendly interface, fostering a closer and more engaging connection in the digital realm.",
+    image: "https://i.ibb.co/qJb7yVn/Screenshot-2024-02-25-015658.png",
+    tags: ["ReactJS", "NodeJS", "Websockets", "WebRTC"],
     category: "frontend",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify.duckdns.org",
+    github: "https://github.com/hrshil72/Video-Chatting-App",
+    webapp: "https://lets-hinge.vercel.app/",
   },
   {
     id: 2,
-    title: "title",
-    date: "Jun 2023 - Jul 2023",
-    description: "description",
-    image: "image",
-    tags: ["tags"],
+    title: "Multiplayer Real-Time Tic-Tac-Toe",
+    description:
+      "Multiplayer Real-Time Tic-Tac-Toe: Rediscover the classic game of Tic-Tac-Toe in a dynamic and interactive multiplayer setting. Crafted with React, Node.js, and Socket.IO, this project allows users to engage in real-time matches with friends or opponents. Experience the thrill of strategic gameplay and instant moves as you compete on a shared digital board. Bring a timeless game to life with a modern twist in this multiplayer real-time experience.",
+    image: "https://i.ibb.co/bK6jzLH/Screenshot-2024-03-01-221417.png",
+    tags: ["ReactJS", "NodeJS", "Websockets"],
     category: "frontend",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify.duckdns.org",
+    github: "https://github.com/hrshil72/Real-Time-TicTacToe",
+    webapp: "https://real-time-tic-tac-toe-game.vercel.app/",
   },
   {
     id: 3,
-    title: "title",
-    date: "Jun 2023 - Jul 2023",
-    description: "description",
-    image: "image",
-    tags: ["tags"],
+    title: "Code Editor",
+    description:
+      "Online Code Editor: Dive into a dynamic coding experience with this meticulously crafted online code editor. Built using ReactJS and Material UI, this feature-rich platform allows coding in HTML, CSS, and JavaScript. Witness real-time output display, akin to popular platforms like Codepen, providing a robust environment for developers to experiment and showcase their coding skills. Whether you're a seasoned coder or just starting, this user-friendly editor is designed to enhance your coding journey.",
+    image: "https://i.ibb.co/89FdY8z/Screenshot-2024-02-19-015503.png",
+    tags: ["ReactJS", "Material UI"],
     category: "frontend",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify.duckdns.org",
+    github: "https://github.com/hrshil72/Code-Editor",
+    webapp: "https://syntaxhub.vercel.app/",
   },
 ];
 
