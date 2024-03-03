@@ -241,10 +241,7 @@ const Hero = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <Img
-              src="https://static.vecteezy.com/system/resources/previews/024/766/962/original/silver-gradient-social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-free-vector.jpg"
-              alt="hero-image"
-            />
+            <Img src={HeroImg} alt="hero-image" />
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>
